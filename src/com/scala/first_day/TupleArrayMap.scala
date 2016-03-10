@@ -5,7 +5,6 @@ package com.scala.first_day
  */
 
 object TupleArrayMap {
-
 	//think in java
 	def tupleFun(): Unit = {
 		val tupleList = (1,2,"a","b")
