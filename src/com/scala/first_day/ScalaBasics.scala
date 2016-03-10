@@ -1,7 +1,7 @@
-package com.scala.hello
+package com.scala.first_day
 
 /**
- * Created by wxmimperio on 2016/3/10.
+ * Created by on 2016/3/10.
  */
 
 object ScalaBasics {
@@ -19,6 +19,7 @@ object ScalaBasics {
 		}while(line != "")
 	}
 	def main(args: Array[String]) {
+		//函数调用可以不加括号
 		printLine()
 	}
 }

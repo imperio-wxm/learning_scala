@@ -1,8 +1,9 @@
-package com.scala.hello
+package com.scala.first_day
 
 /**
  * Created by wxmimperio on 2016/3/10.
  */
+
 //静态方法
 object HelloWorld {
 	//Array数组,[数组元素类型]
