@@ -24,9 +24,11 @@ class Teacher {
   }
 }
 
-//含有参数的类，参数会被默认初始化
-//设定private参数后，实例化的对象必须使用重载后的构造函数
-//这样可以让类的主构造函数不让别人去调用
+/**
+ * 含有参数的类，参数会被默认初始化
+ * 设定private参数后，实例化的对象必须使用重载后的构造函数
+ * 这样可以让类的主构造函数不让别人去调用
+ */
 class Teacher1 private(name: String, age: Int) {
   private[this] var gender: String = _
 
