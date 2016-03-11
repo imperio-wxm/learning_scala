@@ -1,6 +1,7 @@
 package com.scala.second_day
 
 import scala.collection.mutable.ArrayBuffer
+import scala.util.Sorting.quickSort
 
 /**
  * Created by wxmimperio on 2016/3/10.
@@ -44,9 +45,35 @@ object ArrayOps {
     for (elm <- array4_reduce) print(elm + " ")
 
     //求和
-    println(Array(1, 2, 3, 4, 5, 6).sum)
+    val sum = Array(1, 2, 3, 4, 5, 6).sum
+    println(sum)
 
     //取最大
     println(ArrayBuffer(1, 2, 3, 4, 56).max)
+
+    //排序(默认升序)
+    println(ArrayBuffer(5, 8, 1, 2, 3, 9, 7, 10, 55, 0).sorted)
+
+    //使用类库快速排序
+    val array5 = Array(10, 5, 3, 6, 9, 7, 10, 50)
+    quickSort(array5)
+    for (elm <- array5) print(elm + " ")
+    println
+
+    //连接
+    val array6 = Array(1, 2, 3, 4, 5, 6)
+    val str_array = array6.mkString(" and ")
+    println(str_array)
+
+    //多维数组
+    //ofDim[Double](3,4)类型为Double，3行4列
+    val maxtrix = Array.ofDim[Double](3,4)
+    maxtrix(2)(1) = 50 //给第2行第1列的元素赋值
+    for (elms <- maxtrix) for (elm <- elms) print(elm + " ")
+    println
+
+    val array7 = new Array[Array[Int]](10)
+    for (elm <- 0 until array7.length) array7(elm) = new Array[Int](elm + 1)
+    for (elms <- array7) print(elms.length + " ")
   }
 }
