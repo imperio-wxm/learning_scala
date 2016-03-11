@@ -40,7 +40,8 @@ class Teacher1 private(name: String, age: Int) {
   }
 }
 
-object OPPInScala {
+
+object OOPThis {
   def main(args: Array[String]) {
     val teacher = new Teacher()
     teacher.name = "wxmimperio"
