@@ -1,4 +1,4 @@
-package com.scala.second_day
+package com.scala.first_day
 
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Sorting.quickSort

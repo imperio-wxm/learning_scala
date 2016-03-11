@@ -1,7 +1,7 @@
-package com.scala.second_day
+package com.scala.first_day
 
-import scala.collection.mutable.Map
 import scala.collection.immutable.SortedMap
+import scala.collection.mutable.Map
 
 /**
  * Created by wxmimperio on 2016/3/11.
