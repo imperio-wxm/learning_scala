@@ -9,7 +9,7 @@ package spark {//子包spark
     //这里的private表示Navigator类的可见度扩展到spark下，可以超越navigation包
     //即Navigator这个类对spark这个包下的所有类和对象可见
     private [spark] class Navigator {
-      //protected声明，不仅当前类可以用，它写的子类也可以用，并且navigation这个包中的所有代码都可以访问
+      //protected声明，不仅当前类可以用，它的子类也可以用，并且navigation这个包中的所有代码都可以访问
       protected [navigation] def uerStarChart(){}
       class LegOfJourney {
         private [Navigator] val distance = 100
