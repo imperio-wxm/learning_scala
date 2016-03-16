@@ -34,5 +34,29 @@ object ListHighOrderOps {
     //过滤
     println(List(1, 2, 3, 4, 5, 6, 7, 8, 9).filter(_ % 2 == 0))
     println(List("Spark", "Hadoop", "Scala").filter(_.length > 5))
+
+    //对List进行分区，偶数基数分两区
+    println(List(1, 2, 3, 4, 5, 6).partition(_ % 2 == 0))
+    //find 找出List中第一个满足条件的元素
+    println(List(1, 2, 3, 4, 5, 6).find(_ % 2 == 0))
+    //获取所有满足条件的元素
+    println(List(1, 2, 3, 4, 5, 6).takeWhile(_ <= 4))
+    //删除所有满足条件的元素
+    println(List(1, 2, 3, 4, 5, 6).dropWhile(_ <= 1))
+    //span 将符合条件分成一部分，不符合条件的另一部分
+    println(List(1, 2, 3, 4, 5, 6).span(_ <= 4))
+
+    //exists 只要一个满足就返回true
+    //forall 全部满足才返回true
+    /**
+     * 矩阵
+     * 1.List(1, 0, 0)不满足forall，返回false
+     * 2.List(0, 0, 0)满足forall，返回true
+     * 3.List(0, 1, 0)不满足forall，返回false
+     * 4.List(false,true,false) 满足exists，返回true
+     */
+    def hastotallyZeroRow(m: List[List[Int]]) = m exists (row => row forall (_ == 0))
+    val m = List(List(1, 0, 0), List(0, 0, 0), List(0, 1, 0))
+    println(hastotallyZeroRow(m))
   }
 }
