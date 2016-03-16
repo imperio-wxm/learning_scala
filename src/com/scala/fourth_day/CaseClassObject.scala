@@ -16,15 +16,15 @@ case class Worker(age: Int, salary: Double) extends Person
 case object Shared extends Person
 
 object CaseClassObject {
-  def main(args: Array[String]) {
+  //模式匹配抽象类Person
+  def caseOps(person: Person) = person match {
+    case Student(age) => println("Student's age is " + age)
+    //第一个参数占位
+    case Worker(_, salary) => println("Worder's salary is " + salary)
+    case Shared => println("No property")
+  }
 
-    //模式匹配抽象类Person
-    def caseOps(person: Person) = person match {
-      case Student(age) => println("Student's age is " + age)
-      //第一个参数占位
-      case Worker(_, salary) => println("Worder's salary is " + salary)
-      case Shared => println("No property")
-    }
+  def main(args: Array[String]) {
 
     //由于Student和Worker都继承自Person，所以可以直接传递
     //实际上是要嗲用apply方法，scala做了优化
