@@ -1,7 +1,8 @@
 package com.scala.fourth_day
 
 /**
- * Created by wxmimperio on 2016/3/16.
+ * Created by wxmimperio on 2016/3/16.、
+ * List的实现方式是链表
  */
 object ListOps {
   def main(args: Array[String]) {
@@ -41,6 +42,7 @@ object ListOps {
     case List() => List(data)
     //递归计算
     //如果当前数据比head要小，则插入到head前面；否则进行递归，重复前面的操作，直到有满足if插入
+    //实际上是一个头插法
     case head :: tail => if (data <= head) data :: dataSet else head :: compute(data, tail)
   }
 }
